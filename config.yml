@@ -1,6 +1,7 @@
 baseURL: https://pydave.de/
 theme: pure
 title: pydave.de
+publishdir: /var/www/vhosts/pydave.de/httpdocs
 defaultContentLanguage: en
 footnoteReturnLinkContents: ↩
 hasCJKLanguage: true
