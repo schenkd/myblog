@@ -1,0 +1,148 @@
+baseURL: https://pydave.de/
+theme: pure
+title: pydave.de
+defaultContentLanguage: en
+footnoteReturnLinkContents: ↩
+hasCJKLanguage: true
+paginate: 7
+googleAnalytics: ""
+enableEmoji: true
+PygmentsCodeFences: false
+permalinks:
+  posts: /:year/:month/:filename/
+
+taxonomies:
+    category : categories
+    tag : tags
+    series : series
+outputFormats:          # use for search. recommend not to modify 
+  SearchIndex:
+    mediaType: "application/json"
+    baseName: "searchindex"
+    isPlainText: true
+    notAlternative: true
+
+outputs:
+    home: ["HTML","RSS","SearchIndex"]  # recommend not to modify
+# sitemap
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      title: Home
+      url: /
+      weight: 1
+
+    - identifier: archives
+      name: Archives
+      title: Archives
+      url: /posts/
+      weight: 2
+
+    - identifier: categories
+      name: Categories
+      title: Categories
+      url: /categories/
+      weight: 3
+
+    - identifier: tags
+      name: Tags
+      title: Tags
+      url: /tags/
+      weight: 4
+
+    - identifier: about
+      name: About
+      title: About
+      url: /about/
+      weight: 5
+
+params:
+  since: 2020
+  dateFormatToUse: "2006/01/02"
+  enablePostCopyright: false
+  # the directory under content folder that you want to render
+  mainSections: ["posts"]
+  # Enable/Disable menu icons
+  # Icon Reference: http://blog.cofess.com/hexo-theme-pure/iconfont/demo_fontclass.html
+  enableMathJax: true #Enable mathjax support, to use mathematical notations
+  highlightjs:
+    langs: ["python", "javascript", "bash", "css", "dockerfile", "go", "http", "ini", "json", "kotlin", "nginx", "scala", "dracula"] 
+
+# refer to http://staticfile.org/, search highlight.js, already have highlight.min.js
+
+  # Allows you to specify an override stylesheet
+  # put custom.css in $hugo_root_dir/static/
+  # customCSS: css/custom.css
+
+  menuIcons:
+    enable: true
+    home: icon-home-fill
+    archives: icon-archives-fill
+    categories: icon-folder
+    tags: icon-tags
+    repository: icon-project
+    books: icon-book-fill
+    links: icon-friendship
+    about: icon-cup-fill
+
+  profile:
+    enabled: true # Whether to show profile bar
+    avatar: img/me.jpg
+    gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
+    author: David Schenk
+    author_title: start small. stay tuned.
+    author_description: Good Good Study, Day Day Up~
+    location: Hennef, Germany
+    follow: https://github.com/schenkd
+    social:
+      links:
+        github: https://github.com/schenkd
+        twitter: https://twitter.com/GonzoMonzo
+        # facebook: /
+        rss: /index.xml
+      link_tooltip: false # enable the social link tooltip, options: true, false
+
+  # Site
+  site:
+    logo:
+      enabled: true
+      width: 40
+      height: 40
+      url: favicon.ico
+    title: MyBlog
+    favicon: favicon.ico
+    board: <p>enjoy~</p>
+
+  share:
+    enable: true
+    sites: facebook,twitter
+    mobile_sites: facebook,twitter
+
+  postCount:
+    enable: true
+    wordcount: true
+    min2read: true
+
+
+  config:
+    skin: theme-black # theme color default is white. other type [theme-black,theme-blue,theme-green,theme-purple]
+    layout: main-center # main-left main-center main-right
+    excerpt_link: Read More
+    toc: true
+
+  sidebar: right
+
+  search:
+    enable: true
+
+  widgets:
+    - board
+    - category
+    - tag
+    - recent_posts
