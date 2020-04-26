@@ -6,7 +6,7 @@ defaultContentLanguage: en
 footnoteReturnLinkContents: ↩
 hasCJKLanguage: true
 paginate: 7
-googleAnalytics: ""
+googleAnalytics: "UA-101614395-1"
 enableEmoji: true
 PygmentsCodeFences: false
 permalinks:
